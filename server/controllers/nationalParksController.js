@@ -10,6 +10,8 @@ let NationalParksModel = require("../models/nationalParksModel")
 //     return response.json(NationalParks);
 // })  
 // }
+
+
 exports.list =  function list(request, response) {
    NationalParksModel.find((e,u)=>{
        return response.json(u);

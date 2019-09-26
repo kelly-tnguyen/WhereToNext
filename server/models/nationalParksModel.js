@@ -9,11 +9,11 @@
  
 //  module.exports = NationalParks
 
- const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
-var nationalParksSchema = new mongoose.Schema({
+var parkSchema = new mongoose.Schema({
     body: String,
     });
- var NationalParks = mongoose.model('NationalParks', nationalParksSchema);
+ var Park = mongoose.model('park', parkSchema);
  
- module.exports = NationalParks
+ module.exports = Park;
