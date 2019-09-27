@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -8,53 +8,110 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-  image: {
-    maxHeight: 200,
-    maxWidth: 300,
-  },
-  card: {
-    maxWidth: 350,
-    maxHeight: 350,
-    margin: 10
-  },
-  media: {
-    height: 180,
-    width: 300
-  },
-});
 
-export default function MediaCard(props) {
-  const classes = useStyles();
+    class Parklist extends Component {
+      // classes = useStyles();
+      liked = () => {
+        console.log(this.props)
+        const likedObject = {
+          // props.name,
+          // props.image
+        }
+    
+        fetch('/liked', {
+          method: 'Post',
+          body: JSON.stringify(this.props)
+          }).then(function(res) {
+            console.log('hi', res);
+            return res.json();
+          }).then(function(data) {
+            console.log(data)
+          });
+      }
+   
+      render() {
+        return (
+          <Card className={this.classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={this.classes.media}
+                image = {this.props.image}
+              //   title = {this.props.name}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {this.props.name}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {this.props.location}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button onClick={() => this.liked()} size="small" color="primary">
+                Add to Next Adventure
+              </Button>
+              <Button size="small" color="primary">
+                Archive
+              </Button>
+            </CardActions>
+          </Card>
+        );
+      }
+    }
+    
+    export default Parklist;
 
-  return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image = {props.image}
-        //   title = {props.name}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.name}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.location}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Add to Next Adventure
-        </Button>
-        <Button size="small" color="primary">
-          Archive
-        </Button>
-      </CardActions>
-    </Card>
-  );
-}
+
+
+// const useStyles = makeStyles({
+//   image: {
+//     maxHeight: 200,
+//     maxWidth: 300,
+//   },
+//   card: {
+//     maxWidth: 350,
+//     maxHeight: 350,
+//     margin: 10
+//   },
+//   media: {
+//     height: 180,
+//     width: 300
+//   },
+// });
+
+// export default function MediaCard(props) {
+//   const classes = useStyles();
+  
+
+//   return (
+//     <Card className={classes.card}>
+//       <CardActionArea>
+//         <CardMedia
+//           className={classes.media}
+//           image = {props.image}
+//         //   title = {props.name}
+//         />
+//         <CardContent>
+//           <Typography gutterBottom variant="h5" component="h2">
+//             {props.name}
+//           </Typography>
+//           <Typography variant="body2" color="textSecondary" component="p">
+//             {props.location}
+//           </Typography>
+//         </CardContent>
+//       </CardActionArea>
+//       <CardActions>
+//         <Button onClick={() => liked()} size="small" color="primary">
+//           Add to Next Adventure
+//         </Button>
+//         <Button size="small" color="primary">
+//           Archive
+//         </Button>
+//       </CardActions>
+//     </Card>
+//   );
+//   }
 
 
 // import React from 'react';
