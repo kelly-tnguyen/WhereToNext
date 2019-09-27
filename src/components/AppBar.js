@@ -87,7 +87,7 @@ class MyNavbar extends React.Component {
             <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left className="mr-auto pcss">
               <Nav.Link style ={{height:'auto', paddingTop:'0', paddingBottom: '0',borderRight: 'solid rgba(255,255,255) 1px',color:'white'}} href="/dashboard">Discover</Nav.Link>
-                <Nav.Link style ={{height:'auto', paddingTop:'0', paddingBottom: '0',borderRight: 'solid rgba(255,255,255) 1px',color:'white'}} href="/nextadventure">Next Adventure</Nav.Link>
+                <Nav.Link style ={{height:'auto', paddingTop:'0', paddingBottom: '0',borderRight: 'solid rgba(255,255,255) 1px',color:'white'}} href="/nextadventure" onClick = {()=>{this.props.changeView()}}>Next Adventure</Nav.Link>
                 <Nav.Link style ={{height:'auto', paddingTop:'0', paddingBottom: '0',color:'white'}} href="/archive">Archive</Nav.Link>
             </MDBNavbarNav>
             <Form inline onSubmit = {(e) => this.search(e)}>
