@@ -21,7 +21,7 @@ function Home(props) {
       <div className="top">
         <h1 className="big">Adventure Awaits</h1>
         <p className="sub"> Discover National Parks and fulfill your wanderlust dreams</p>
-        <Link to="/home">
+        <Link to="/dashboard">
           <Button variant="contained" color="secondary" id="bigger-button" className={classes.button}>
             Discover
           </Button>
