@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import "./styles/AppBar.css"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,18 +34,18 @@ export default function ButtonAppBar() {
           </IconButton>
           <Typography variant="h6" className={classes.title}>
               <Link to="/">
-              WhereToNext
+              <i class="fas fa-tree"> </i> WhereToNext
             </Link>
           </Typography>
           <Link to ="/dashboard">
-          <Button color="default">Dashboard</Button>
+          <Button className = 'topNav' color="default">Discover  </Button>
             </Link>
 
             <Link to ="/nextadventure">
-          <Button color="default">NextAdventure</Button>
+          <Button className = 'topNav' color="default">NextAdventure  </Button>
             </Link>
             <Link to ="/archive">
-          <Button color="default">Archive</Button>
+          <Button className = 'topNav' color="default">Archive  </Button>
           </Link>
         </Toolbar>
       </AppBar>

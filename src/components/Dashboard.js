@@ -67,7 +67,6 @@
 import React, { Component } from 'react';
 import './styles/Dashboard.css';
 import ParkList from "./ParkList";
-import Button from '@material-ui/core/Button'
 import NextAdventure from './NextAdventure';
 
 class Dashboard extends Component {
@@ -120,25 +119,14 @@ class Dashboard extends Component {
       
       return (
         <div className = 'body'>
-            <div className = 'dashboard'>
+            <div className = 'banner'>Discover National Parks</div>
+                <div className = 'dashboard'>
                 <input type="text" placeholder="Search for a National Park" onChange={this.onchange} className="search"/> 
                     <div className = 'main'>
                         {item}
                     </div>
-        </div>
-    
-     <div style = {{marginBottom: '3vh', marginTop: '3vh', display: 'flex', justifyContent: 'flex-end'}}>
-     <Button style = {{marginRight:'3vh'}} variant = "contained" color = "primary" onClick={()=>{
-         if(parseInt(this.path.slice(13,14)) !== 1){
-             var pagenumber = parseInt(this.path.slice(13,14)) - 1;
-             window.location.href = this.path.slice(0,13)+ pagenumber + this.path.slice(14)
-         }
-     }}>Back</Button>
-     <Button variant = "contained" color = "primary" onClick={()=>{
-     var pagenumber = parseInt(this.path.slice(13,14)) + 1
-     window.location.href = this.path.slice(0,13)+ pagenumber + this.path.slice(14)
-     }}>Next</Button>
-        </div>
+            
+            </div>
         </div>
         );
     }

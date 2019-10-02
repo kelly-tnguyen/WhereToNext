@@ -1,0 +1,9 @@
+.banner{
+    padding: 130px;
+    height: 6em;
+    width: 100%;
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Pattaya', sans-serif;
+}

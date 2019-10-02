@@ -4,6 +4,11 @@
     "b";
   }
   
+  #bigger-button {
+    padding: .5em 1.5em;
+    font-size: 1.1em !important;
+}
+
   .top{
     grid-area: "a";
     display: flex;
@@ -20,7 +25,7 @@
   
   .mid{
     grid-area: "b";
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     width: 100%;
     height: 800px;
     display: flex;
@@ -42,17 +47,22 @@
   
   .big{
     font-size: 4em;
-    /* font-family: 'Pattaya', sans-serif; */
+    font-family: 'Pattaya', sans-serif;
     /* font-family: 'Sanchez', serif; */
     /* font-family: 'Pacifico', cursive; */
-    font-family: 'Mansalva', cursive;
+    /* font-family: 'Mansalva', cursive; */
+    /* font-family: 'Gochi Hand', cursive; */
+    /* font-family: 'Architects Daughter', cursive; */
+    /* font-family: 'Mr Dafoe', cursive; */
+    /* font-family: 'Questrial', sans-serif; */
    
 
 
   }
   
   .sub{
-    font-size: 1.5em;
+    font-size: 1.8em;
+    /* font-family: 'Sanchez', serif; */
     font-family: 'Questrial', sans-serif;
     /* font-family: 'Poppins', sans-serif; */
     /* font-family: 'Quicksand', sans-serif; */

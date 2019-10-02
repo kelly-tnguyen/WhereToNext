@@ -9,12 +9,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-    background: #757F9A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(218, 214, 214);
 
-    
-
+    /* background: #757F9A;  
+background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  
+background: linear-gradient(to right, #D7DDE8, #757F9A);  */
 }
 
 .dashboard{
@@ -24,6 +23,16 @@ background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, F
     "main";
     margin-top: 3em;
     text-align: center;
+  }
+
+  .banner {
+    padding: 130px;
+    height: 6em;
+    width: 100%;
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Pattaya', sans-serif;
   }
   
   .search{
@@ -39,6 +48,8 @@ background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, F
   }
   
   .main{
+    padding-right: 100px;
+    padding-left: 100px;
     grid-area: 'main';
     display: flex;
     flex-direction: row;
@@ -50,23 +61,11 @@ background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, F
     margin: auto;
   }
 
-/* .displayParks{
-    display: flex;
-    word-wrap: break-word;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 85%;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Heebo', sans-serif;
-    margin: auto;
-    justify-content: center;
-    grid-area: 'main';
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 85%;
-    align-items: center;
-    font-family: 'Heebo', sans-serif;
-    margin: auto;
-} */
+  h2 {
+       font-family: 'Questrial', sans-serif !important; 
+       font-weight: bold !important;
+  }
+
+  p {
+    font-family: 'Questrial', sans-serif !important; 
+  }

@@ -1,0 +1,30 @@
+.MuiAppBar-colorPrimary {
+    color: #fff;
+    background-color: #2E7999 !important;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.2em;
+    /* font-family: 'Sanchez', serif; */
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Mansalva', cursive; */
+    /* font-family: 'Gochi Hand', cursive; */
+    font-family: 'Architects Daughter', cursive;
+    /* font-family: 'Questrial', sans-serif; */
+}
+
+.topNav {
+    color: white !important;    
+    font-size: 0.75em !important;
+    font-family: 'Sanchez', serif !important;
+}
+
+.MuiButton-label {
+    padding-left: 11px;
+    align-items: inherit;
+    justify-content: inherit;
+}
