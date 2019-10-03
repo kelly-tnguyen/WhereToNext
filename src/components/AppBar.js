@@ -27,7 +27,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar fixed="top" dark expand="md" scrolling transparent style = {{boxShadow:'0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="default" aria-label="menu">
             <MenuIcon />
@@ -47,6 +47,7 @@ export default function ButtonAppBar() {
             <Link to ="/archive">
           <Button className = 'topNav' color="default">Archive  </Button>
           </Link>
+
         </Toolbar>
       </AppBar>
     </div>

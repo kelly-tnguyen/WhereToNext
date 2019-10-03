@@ -9,12 +9,12 @@ a {
     color: white;
     transition: all 0.2s ease-in-out;
     font-size: 1.2em;
+    font-family: 'Questrial', sans-serif;
     /* font-family: 'Sanchez', serif; */
     /* font-family: 'Pacifico', cursive; */
     /* font-family: 'Mansalva', cursive; */
     /* font-family: 'Gochi Hand', cursive; */
     /* font-family: 'Architects Daughter', cursive; */
-    font-family: 'Questrial', sans-serif;
 }
 
 .topNav {
@@ -27,4 +27,8 @@ a {
     padding-left: 11px;
     align-items: inherit;
     justify-content: inherit;
+}
+
+.MuiToolbar-regular {
+    min-height: 52px !important;
 }

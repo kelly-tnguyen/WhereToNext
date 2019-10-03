@@ -70,7 +70,6 @@ export default function MediaCard(props) {
       })
     }
 
- // if id isn't in database, run the fetch
  
     fetch("http://localhost:3001/archives", newArchive)
     .then((res)=>{
@@ -78,7 +77,6 @@ export default function MediaCard(props) {
     })
     alert('Park added to Archive');
 
-  //else, don't add it if it's there/alert them saying it's added already
   }
 
   return (
@@ -104,6 +102,7 @@ export default function MediaCard(props) {
         <Button className="links" size="small" color="primary" onClick = {()=>{newArchive()}}>
         <i class="fas fa-plus">  </i> Archive
         </Button>
+      
       </CardActions>
     </Card>
   );

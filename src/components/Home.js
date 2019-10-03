@@ -21,9 +21,9 @@ function Home(props) {
       <div className="top">
         <h1 className="big">Adventure Awaits</h1>
         <p className="sub"> Discover National Parks and fulfill your wanderlust dreams</p>
-        <Link to="/dashboard">
+        <Link to="/signup">
           <Button variant="contained" color="secondary" id="bigger-button" className={classes.button}>
-            Discover
+            Sign Up
           </Button>
         </Link>
         {/* <span id="down"><a href="#middle"> 

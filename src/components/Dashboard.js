@@ -198,7 +198,6 @@ class Dashboard extends Component {
         const filteredParks = this.state.parks.filter(park=>{
           return park.name.toLowerCase().indexOf( search.toLowerCase() ) !== -1
         })
-        console.log(filteredParks)
 
         // var item;
         const cards = filteredParks.map(item => {
