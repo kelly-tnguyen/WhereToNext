@@ -57,6 +57,30 @@ export default function MediaCard(props) {
   //else, don't add it if it's there/alert them saying it's added already
   }
 
+
+  const newArchive = () => {
+    // e.preventDefault();
+    let newArchive={
+      method:"POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+          name: props.name, 
+          location: props.location,
+          image: props.image
+      })
+    }
+
+ // if id isn't in database, run the fetch
+ 
+    fetch("http://localhost:3001/archives", newArchive)
+    .then((res)=>{
+        console.log(res.text())
+    })
+    alert('Park added to Archive');
+
+  //else, don't add it if it's there/alert them saying it's added already
+  }
+
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -77,7 +101,7 @@ export default function MediaCard(props) {
         <Button className="links" size="small" color="primary" onClick = {()=>{newPark()}}>
         <i class="fas fa-plus">  </i> Next Adventure
         </Button>
-        <Button className="links" size="small" color="primary">
+        <Button className="links" size="small" color="primary" onClick = {()=>{newArchive()}}>
         <i class="fas fa-plus">  </i> Archive
         </Button>
       </CardActions>

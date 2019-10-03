@@ -194,23 +194,13 @@ class Dashboard extends Component {
   }
   
   render() {
-      
-    //   item = this.state.parks.map (item => {
-    //       return <ParkList 
-    //         id = {item._id}
-    //         name = {item.name}
-    //         image = {item.image}
-    //         location = {item.location}
-    //         />
-    //   })
-
         const {search} = this.state;
         const filteredParks = this.state.parks.filter(park=>{
           return park.name.toLowerCase().indexOf( search.toLowerCase() ) !== -1
         })
         console.log(filteredParks)
 
-        var item;
+        // var item;
         const cards = filteredParks.map(item => {
             return <ParkList 
             id = {item._id}
@@ -220,7 +210,6 @@ class Dashboard extends Component {
      />
           });
 
-          console.log(search)
 
       return (
         <div className = 'body'>
