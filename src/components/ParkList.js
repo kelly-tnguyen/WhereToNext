@@ -40,19 +40,21 @@ export default function MediaCard(props) {
       method:"POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
-          name: props.name,
+          name: props.name, 
           location: props.location,
           image: props.image
       })
     }
 
-console.log(newPark);
-
+ // if id isn't in database, run the fetch
+ 
     fetch("http://localhost:3001/likes", newPark)
     .then((res)=>{
         console.log(res.text())
     })
     alert('Park added to Next Adventure!');
+
+  //else, don't add it if it's there/alert them saying it's added already
   }
 
   return (
@@ -72,7 +74,7 @@ console.log(newPark);
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button className="links" size="small" color="primary" onClick = {()=>{newPark()}} >
+        <Button className="links" size="small" color="primary" onClick = {()=>{newPark()}}>
         <i class="fas fa-plus">  </i> Next Adventure
         </Button>
         <Button className="links" size="small" color="primary">
