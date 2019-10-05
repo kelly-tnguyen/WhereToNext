@@ -1,11 +1,20 @@
 let express = require("express");
+const dotenv = require("dotenv");
+dotenv.config();
 let usersRoute = require("./server/routes/usersRoute");
 let nationalParksRoute = require("./server/routes/nationalParksRoute");
 let likedRoute = require("./server/routes/likedRoute")
 let archiveRoute = require("./server/routes/archiveRoute")
 
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb+srv://kelly-nguyen-1:45683968kn@aca-practice-ss4lm.mongodb.net/wheretonext?retryWrites=true&w=majority', {useNewUrlParser: true},(err)=>{
+//    console.log("the error is",err)
+//    //start web server
+// });
+
+
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://kelly-nguyen-1:45683968kn@aca-practice-ss4lm.mongodb.net/wheretonext?retryWrites=true&w=majority', {useNewUrlParser: true},(err)=>{
+mongoose.connect(process.env.mongodburi,  {useNewUrlParser: true},(err)=>{
    console.log("the error is",err)
    //start web server
 });
